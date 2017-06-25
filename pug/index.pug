@@ -1,0 +1,14 @@
+include mixin/anchor.pug
+include mixin/tooltip.pug
+include mixin/blanka.pug
+
+doctype html
+html(lang='en')
+  head
+    include head.pug
+  body
+    .wrapper
+      .header
+        include body-header.pug
+      .main-content
+        include body-content.pug
