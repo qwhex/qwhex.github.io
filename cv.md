@@ -1,24 +1,66 @@
-Pápai Mice
-=========
+Pápai István
+============
+
+todo: Cím, telefonszám, etc adatok
+
+# Freelance munkák (2017)
+
+Projectek:
+
+Eszközeim:
+
+- Trello
+  Project management
+
+- Toggl
+  Time management
+
+- Nimspire `Nim`
+  Saját ötlet-inkubáló CLI app, ahol egy pakli aljára egysoros ötletet írhatok
+  és minden beírt ötlet után a pakli tetején lévő ötletet megkapom, majd
+  értékelés után a minősége alapján a virtuális pakli bizonyos részébe
+  illesztődik. Minél jobbnak találom a kapott ötletet, annál hamarabb fogok vele
+  újra találkozni.
+
+  ## Autodidakta tanulmányok
+
+  Eszközeim:
+
+  - Anki
+    Évek óta fejlesztek saját paklikat kémiából, biológiából, spanyolból,
+    angolból, Pythonból, sassból, git parancsokból és egyebekből.
+
+  - Google Scholar
+    Kutatások keresése
+
+  - PubMed (Central)
+    Teljes kutatások vagy abstractek keresése, olvasása
+
+  - CherryTree
+    Personal wiki jegyzeteléshez
 
 ## Hivatalos tanulmányok
 
 ### Semmelweis Egyetem, Gógyszerésztudományi Kar
+
+2016 és 2017 szeptemberében is elkezdtem az első félévet. Mindkétszer hamar
+rájöttem, hogy már szeretném kiélni a kreativitásom munkában és saját
+projectekben ahelyett, hogy még sok évet egyetemen tanuljak.
 
 ### ELTE, Kémia
 
 
 ### Érettségi
 
-| Tárgy       | Szint |  % | Jegy | Év   | Megjegyzés                                |
-| :---------- | :---- | -: | ---: | ---: | :---------------------------------------- |
-| Biológia    | emelt | 83 | 5    | 2015 | SOTE GyTK-hoz kellett                     |
-| Informatika | emelt | 86 | 5    | 2014 | Dicséret, 100%-os szóbeli                 |
-| Kémia       | emelt | 68 | 5    | 2014 | ELTE kémiához dupláztam az emelteket      |
-| Angol       | közép | 92 | 5    | 2014 | A középszintűekkel nem foglalkoztam       |
-| Magyar      | közép | 91 | 5    | 2014 | -                                         |
-| Matematika  | közép | 81 | 5    | 2014 | -                                         |
-| Történelem  | közép | 65 | 4    | 2014 | Egy esszét meg sem írtam, cigiztem inkább |
+| Tárgy       | Szint |  % | Jegy | Év   | Megjegyzés                          |
+| :---------- | :---- | -: | ---: | ---: | :---------------------------------- |
+| Biológia    | emelt | 83 | 5    | 2015 | SOTE GyTK-hoz                       |
+| Informatika | emelt | 86 | 5    | 2014 | Emléklap, 100%-os szóbeli           |
+| Kémia       | emelt | 68 | 5    | 2014 | ELTE kémiához                       |
+| Angol       | közép | 92 | 5    | 2014 | A középszintűek nem kellettek       |
+| Magyar      | közép | 91 | 5    | 2014 | -                                   |
+| Matematika  | közép | 81 | 5    | 2014 | -                                   |
+| Történelem  | közép | 65 | 4    | 2014 | -                                   |
 
 ### Gimnázium
 
