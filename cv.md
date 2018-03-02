@@ -63,15 +63,15 @@ Mice Pápai
 
 todo: Cím, telefonszám, etc adatok
 
-# Freelance jobs (2016-2018)
+## Freelance projects (2016-2018)
 
 
 ## Education
 
-### Semmelweis University, Pharmacology (2015)
+### University
 
-### ELTE, Chemistry (2014)
-
+- Semmelweis University, Pharmacology (2015)
+- ELTE, Chemistry (2014)
 
 ### High School
 

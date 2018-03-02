@@ -1,12 +1,137 @@
 //
-$bg-color: #111;
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+// @import url('https://fonts.googleapis.com/css?family=Oswald');
+// @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+
+$main-font: 'Quicksand', sans-serif;
+$header-font: 'Open Sans Condensed', sans-serif;
+
+$rich-black: #0a0d1d;
+$ghost-white: #f7fbfc;
 
 body {
-  background-color: $bg-color;
+  // background-color: $rich-black;
+  background-image: url('/img/bg.jpg');
+  color: $ghost-white;
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-img {
+td {
+  padding: .2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+a {
+  color: #00ffff;
+  text-decoration: none;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.header {
+  margin: 4rem auto 2rem;
+  height: 200px;
+}
+
+.main-content {
+  margin: 0 auto 6rem;
+}
+
+.main-content,
+.header {
+  max-width: 60rem;
+}
+
+.column {
+  width: 28rem;
+  margin-right: 2rem;
+  float: left;
+}
+
+//toggle
+
+.exam-results {
+  display: none;
+}
+
+.show-exam-results {
+  display: none;
+}
+
+.show-exam-results:checked ~ .exam-results {
   display: block;
-  height: 62vh;
-  margin: 19vh auto;
+}
+
+label::before {
+  content: 'Show';
+}
+
+.show-exam-results:checked + label::before {
+  content: 'Hide';
+}
+
+label {
+  bottom: 0;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.portrait {
+  border-radius: 50%;
+  height: 200px;
+  float: left;
+}
+
+.title {
+  left: 2rem;
+  height: 125px;
+  width: 30rem;
+  vertical-align: middle;
+  float: left;
+  position: relative;
+  margin: 0;
+  padding-top: 75px;
 }
