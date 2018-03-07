@@ -145,7 +145,11 @@ a {
   display: block;
 }
 
-label::before {
+label::before {@media only screen and (max-width: 1000px) {
+  .column {
+    width: 20rem;
+  }
+}
   content: 'Show';
 }
 
@@ -177,4 +181,19 @@ label {
   position: relative;
   margin: 0;
   padding-top: 75px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 100px;
+  }
+
+  .portrait {
+    height: 100px;
+  }
+
+  .title {
+    height: 63px;
+    padding-top: 37px;
+  }
 }
