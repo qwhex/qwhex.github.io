@@ -9,9 +9,11 @@ $header-font: 'Open Sans Condensed', sans-serif;
 
 $rich-black: #0a0d1d;
 $ghost-white: #f7fbfc;
+$funky-magenta: #f71559;
+$bg-avg: #161816;
 
 body {
-  // background-color: $rich-black;
+  background-color: $bg-avg;
   background-image: url('/img/bg_small.jpg');
   color: $ghost-white;
   font-family: $main-font;
@@ -60,11 +62,12 @@ h1 {
 }
 
 a {
-  color: #00ffff;
+  color: $funky-magenta;
   text-decoration: none;
+  transition: all 420ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
 
   &:hover {
-    color: #ffffff;
+    color: $ghost-white;
   }
 }
 
