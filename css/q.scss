@@ -17,8 +17,43 @@ body {
   background-image: url('/img/bg_small.jpg');
   color: $ghost-white;
   font-family: $main-font;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
+}
+
+@media only screen and (min-width: 320px) {
+  body,
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  body,
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body,
+  html {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  body,
+  html {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body,
+  html {
+    font-size: 18px;
+  }
 }
 
 td {
@@ -64,7 +99,7 @@ h1 {
 a {
   color: $funky-magenta;
   text-decoration: none;
-  transition: all 420ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+  transition: all 420ms cubic-bezier(.42, 0, .58, 1);
 
   &:hover {
     color: $ghost-white;
@@ -73,22 +108,27 @@ a {
 
 .header {
   margin: 4rem auto 2rem;
+  padding: 0 1rem;
   height: 200px;
+  max-width: 58rem; /* magic */
 }
 
 .main-content {
   margin: 0 auto 6rem;
-}
-
-.main-content,
-.header {
   max-width: 60rem;
 }
 
 .column {
   width: 28rem;
-  margin-right: 2rem;
+  margin: 0;
+  padding: 0 1rem;
   float: left;
+}
+
+@media only screen and (max-width: 1000px) {
+  .column {
+    width: 20rem;
+  }
 }
 
 //toggle
@@ -131,7 +171,7 @@ label {
 .title {
   left: 2rem;
   height: 125px;
-  width: 30rem;
+  width: 10rem;
   vertical-align: middle;
   float: left;
   position: relative;
