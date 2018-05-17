@@ -1,2 +1,21 @@
-console.info('hello\ncall go() to continue')
-function go () {window.location.replace('https://mixnose.com/cv/w.html')}
+console.info('Hello')
+
+window.addEventListener('load', function () {
+  window.cookieconsent.initialise({
+    'palette': {
+      'popup': {
+        'background': '#161816',
+        'text': '#f7fbfc'
+      },
+      'button': {
+        'background': '#f71559'
+      }
+    },
+    'theme': 'edgeless',
+    'position': 'bottom-left',
+    'content': {
+      'message': 'I know how to use cookies.',
+      'dismiss': 'Ok...'
+    }
+  })
+})
