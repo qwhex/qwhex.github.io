@@ -105,6 +105,7 @@ a {
   color: $funky-magenta;
   text-decoration: none;
   transition: color 420ms $ease-in-out;
+  font-weight: 400;
 
   &:hover {
     color: $ghost-white;
@@ -129,7 +130,7 @@ a {
 
 .column {
   width: 28rem;
-  margin: 0 0 4rem;
+  margin: 0 0 2rem;
   padding: 0 1rem;
   float: left;
 }
@@ -192,21 +193,6 @@ label {
   padding-top: 75px;
 }
 
-@media only screen and (max-width: 768px) {
-  .header {
-    height: 100px;
-  }
-
-  .portrait {
-    height: 100px;
-  }
-
-  .title {
-    height: 63px;
-    padding-top: 37px;
-  }
-}
-
 // tooltip
 
 span.tooltip {
@@ -224,6 +210,7 @@ span.tooltip {
     display: inline;
     padding: 0.3rem 0.6rem;
     margin: -0.2rem 0 0 0.3rem;
+    max-width: 20rem;
   }
 
   &:hover {
@@ -256,5 +243,26 @@ span.tooltip {
         opacity: 0.9;
         transition: opacity 420ms $ease-in-out;
       }
+  }
+}
+
+// mobile
+
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 100px;
+  }
+
+  .portrait {
+    height: 100px;
+  }
+
+  .title {
+    height: 63px;
+    padding-top: 37px;
+  }
+
+  span.tooltip span {
+    display: none;
   }
 }
