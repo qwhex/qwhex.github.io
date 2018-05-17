@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400&subset=latin-ext');
 // @import url('https://fonts.googleapis.com/css?family=Oswald');
 // @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
@@ -23,6 +23,7 @@ body {
   color: $ghost-white;
   font-family: $main-font;
   font-size: 14px;
+  font-weight: 300;
   line-height: 1.5;
 }
 
@@ -73,8 +74,7 @@ h5,
 h6 {
   font-family: $header-font;
   font-weight: 100;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+  margin: 1rem 0;
 }
 
 h6 {
@@ -111,6 +111,10 @@ a {
   }
 }
 
+::selection {
+  background: $funky-magenta;
+}
+
 .header {
   margin: 4rem auto 2rem;
   padding: 0 1rem;
@@ -119,13 +123,13 @@ a {
 }
 
 .main-content {
-  margin: 0 auto 6rem;
+  margin: 0 auto;
   max-width: 60rem;
 }
 
 .column {
   width: 28rem;
-  margin: 0;
+  margin: 0 0 4rem;
   padding: 0 1rem;
   float: left;
 }
@@ -203,6 +207,8 @@ label {
   }
 }
 
+// tooltip
+
 span.tooltip {
   outline: none;
   padding-right: 0.4rem;
@@ -231,7 +237,7 @@ span.tooltip {
       border-radius: 4px;
       box-shadow: 0.2rem 0.2rem 0.4rem $bg-avg;
 
-      opacity: 0.95;
+      opacity: 0.98;
       transition: opacity 420ms $ease-in-out;
     }
   }

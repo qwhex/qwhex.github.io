@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400&subset=latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
 body {
   background-color: #161816;
@@ -6,6 +6,7 @@ body {
   color: #f7fbfc;
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
+  font-weight: 300;
   line-height: 1.5;
 }
 
@@ -51,8 +52,7 @@ h5,
 h6 {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 100;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+  margin: 1rem 0;
 }
 
 h6 {
@@ -88,6 +88,10 @@ a:hover {
   color: #f7fbfc;
 }
 
+::selection {
+  background: #f71559;
+}
+
 .header {
   margin: 4rem auto 2rem;
   padding: 0 1rem;
@@ -97,13 +101,13 @@ a:hover {
 }
 
 .main-content {
-  margin: 0 auto 6rem;
+  margin: 0 auto;
   max-width: 60rem;
 }
 
 .column {
   width: 28rem;
-  margin: 0;
+  margin: 0 0 4rem;
   padding: 0 1rem;
   float: left;
 }
@@ -203,7 +207,7 @@ span.tooltip:hover span {
   background-color: #3a243b;
   border-radius: 4px;
   box-shadow: 0.2rem 0.2rem 0.4rem #161816;
-  opacity: 0.95;
+  opacity: 0.98;
   transition: opacity 420ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
