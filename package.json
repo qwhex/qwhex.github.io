@@ -1,0 +1,19 @@
+{
+  "name": "mice-papai-cv",
+  "version": "1.0.0",
+  "description": "Mice Pápai CV",
+  "main": "build/build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://botlik@bitbucket.org/botlik/cv.git"
+  },
+  "keywords": [
+    "cv"
+  ],
+  "author": "Mice Pápai",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/botlik/cv#readme"
+}
