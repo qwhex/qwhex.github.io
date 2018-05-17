@@ -242,3 +242,19 @@ span.tooltip {
     }
   }
 }
+
+// anchor
+
+.anchor {
+  .section {
+      position: absolute;
+      margin: 0 0 0 -1rem;
+      opacity: 0;
+
+      &:hover {
+        color: $funky-magenta;
+        opacity: 0.9;
+        transition: opacity 420ms $ease-in-out;
+      }
+  }
+}
