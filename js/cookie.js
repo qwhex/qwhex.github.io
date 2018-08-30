@@ -1,4 +1,4 @@
-console.info('Hello')
+'use strict'
 
 window.addEventListener('load', function () {
   window.cookieconsent.initialise({

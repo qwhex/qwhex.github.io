@@ -1,39 +1,23 @@
 .column
-  h2
-    +anchor('skills')
-    | Skills
-  include section/skills.pug
-    
-  h2
-    +anchor('languages')
-    | Languages
-  include section/languages.pug
-    
-  h2 Work        
-  include section/work.pug
-        
-.column
-  h2
-    +anchor('experience')
-    | Experience
+  +anchor('Experience')
   include section/experience.pug
   
-  h2
-    +anchor('libraries-and-frameworks')
-    | Libraries and Frameworks
+  +anchor('Libraries')
   include section/libraries.pug
   
-  h2
-    +anchor('education')
+  +anchor('Education')
     | Education
   include section/education.pug
   
-  h4
-    +anchor('exit-exam-results')
-    | Exit Exam Results
-  include section/exam-results.pug
-  
-  h2 
-    +anchor('contact')
-    | Contact
+  +anchor('Contact')
   include section/contact.pug
+
+.column
+  +anchor('Skills')
+  include section/skills.pug
+    
+  +anchor('Languages')
+  include section/languages.pug
+    
+  +anchor('Work')   
+  include section/work.pug

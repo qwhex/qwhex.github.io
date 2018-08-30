@@ -6,10 +6,10 @@
   "scripts": {
     "build": "npm run build-pug && npm run build-css && npm run build-css-min",
     "build-pug": "node build/build.js",
-    "watch-pug": "nodemon -e index.pug -x \"npm run build-pug\"",
-    "build-css": "node-sass --include-path css --output-style expanded css/q.scss css/q.css",
-    "build-css-min": "node-sass --include-path css --output-style compressed --source-map true css/q.scss css/q.min.css",
-    "watch-css": "nodemon -e css -x \"npm run build-css && npm run build-css-min\"",
+    "watch-pug": "nodemon -e pug/* -x \"npm run build-pug\"",
+    "build-css": "node-sass --include-path css --output-style expanded css/src/q.scss css/q.css",
+    "build-css-min": "node-sass --include-path css --output-style compressed --source-map true css/src/q.scss css/q.min.css",
+    "watch-css": "nodemon -e css/src -x \"npm run build-css && npm run build-css-min\"",
     "test": "mocha"
   },
   "repository": {
@@ -21,7 +21,7 @@
   ],
   "author": "Mice Pápai",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/botlik/cv#readme",
+  "homepage": "https://qwhex.github.io",
   "devDependencies": {
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
@@ -31,7 +31,7 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
     "mocha": "^5.1.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.3",
     "nodemon": "^1.17.3",
     "nyc": "^11.7.1",
     "pug": "^2.0.3",

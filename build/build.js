@@ -2,7 +2,8 @@ const fs = require('fs')
 const pug = require('pug')
 
 function compilePugs () {
-  const makeIndex = pug.compileFile('index.pug')
+  console.info('compiling pug files')
+  const makeIndex = pug.compileFile('pug/index.pug')
   fs.writeFileSync('index.html', makeIndex())
 }
 
