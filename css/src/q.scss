@@ -1,20 +1,27 @@
+@import 'vendor/normalize8.0.0';
+
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 //@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:100');
-
+ 
+ 
 $main-font: 'Quicksand', sans-serif;
 $header-font: 'Open Sans Condensed', sans-serif;
 
 $rich-black: #0a0d1d;
-$ghost-white: #f7fbfc;
-$gray: #bbbbbb;
-$funky-magenta: #f71559;
 $bg-avg: #161816;
+$gray: #bbbbbb;
+$ghost-white: #f7fbfc;
+
+$funky-magenta: #f71559;
 $funky-purple: #3a243b;
 
 $ease-in-out: cubic-bezier(.42, 0, .58, 1);
 
-$magic: 58rem;
+$column-width: 24rem;
+$padding-basic: 1rem;
+$column-count: 2;
+$content-width: ($column-count * $column-width) + ($column-count * $padding-basic * 2);
 
 body {
   background-color: $bg-avg;
@@ -107,10 +114,6 @@ a {
   }
 }
 
-::selection {
-  background: $funky-magenta;
-}
-
 td {
   padding: .2rem;
 }
@@ -119,22 +122,30 @@ ul {
   list-style-type: circle;
 }
 
+::selection {
+  background: $funky-magenta;
+}
+
+/*
+  Classes
+*/
+
 .header {
   margin: 4rem auto 2rem;
-  padding: 0 1rem;
+  padding: 0 $padding-basic;
   height: 200px;
-  max-width: $magic;
+  max-width: $content-width;
 }
 
 .main-content {
   margin: 0 auto;
-  max-width: 60rem;
+  max-width: $content-width;
 }
 
 .column {
-  width: 28rem;
-  margin: 0 0 2rem;
-  padding: 0 1rem;
+  width: $column-width;
+  margin: 0 0 4rem;
+  padding: 0 $padding-basic;
   float: left;
 }
 
@@ -180,6 +191,7 @@ label {
 }
 
 .portrait {
+  padding: 0 $padding-basic;
   border-radius: 50%;
   height: 200px;
   float: left;
