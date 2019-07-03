@@ -1,12 +1,7 @@
-# Mice Pápai
+[Read my CV here](https://qwhex.github.io/)
 
-[Url to my website](https://qwhex.github.io/)
-
-Contact me about professional endeavors or invite me to contribute to your open source project.
-
-I'm here to help.
-
-## Contact
+Feel free to contact me about professional endeavors or your open source project.
 
 - [E-mail](mailto:qwhexz@gmail.com)
 - [Telegram](https://t.me/knockoutMice)
+- [LinkedIn](https://www.linkedin.com/in/mice-pápai/)
