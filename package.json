@@ -1,6 +1,6 @@
 {
   "name": "mice-papai-cv",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Mice Pápai CV",
   "main": "build/build.js",
   "scripts": {

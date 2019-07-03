@@ -2,11 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
-//@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:100');
  
  
 $main-font: 'Quicksand', sans-serif;
-$header-font: 'Open Sans Condensed', sans-serif;
+$heading-font: 'Open Sans Condensed', sans-serif;
 
 $rich-black: #0a0d1d;
 $bg-avg: #161816;
@@ -74,13 +73,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $header-font;
+  font-family: $heading-font;
   font-weight: 200;
-  margin: 1rem 0 .5rem;
+  margin: 1rem 0 .4rem;
 }
 
 h6 {
-  font-size: 0.75rem;
+  font-size: .75rem;
 }
 
 h5 {
@@ -156,7 +155,7 @@ ul {
   }
 }
 
-//toggle
+// toggle
 
 .exam-results {
   display: none;
@@ -215,10 +214,6 @@ span.tooltip {
   outline: none;
   padding-right: 0.4rem;
 
-  strong {
-    line-height: 30px;
-  }
-
   span {
     z-index: 10;
     opacity: 0;
@@ -227,21 +222,21 @@ span.tooltip {
     padding: 0.3rem 0.6rem;
     margin: -0.2rem 0 0 0.3rem;
     max-width: 20rem;
+
+    font-size: 0.8rem;
+    color: $ghost-white;
+    border: 1px solid $bg-avg;
+    border-radius: 4px;
+    background-color: $funky-purple;
+    box-shadow: 0.2rem 0.2rem 0.4rem $bg-avg;
+    transition: opacity 420ms $ease-in-out;
   }
 
   &:hover {
     text-decoration: none;
 
     span {
-      font-size: 0.8rem;
-      color: $ghost-white;
-      border: 1px solid $bg-avg;
-      background-color: $funky-purple;
-      border-radius: 4px;
-      box-shadow: 0.2rem 0.2rem 0.4rem $bg-avg;
-
       opacity: 0.98;
-      transition: opacity 420ms $ease-in-out;
     }
   }
 }
@@ -280,5 +275,101 @@ span.tooltip {
 
   span.tooltip span {
     display: none;
+  }
+}
+
+/*
+  Print & pdf export support
+*/
+
+$print-text-color: #000;
+$print-bg-color: #fff;
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  body {
+    background-color: $print-bg-color;
+    background-image: none;
+    color: $print-text-color;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  a {
+    color: $print-text-color;
+
+    &:hover {
+      color: $print-text-color;
+    }
+
+    // note: should be useful if other links are added
+    // &:after {
+    //   content: "- "attr(href);
+    // }
+  }
+  
+  .main-content, .header {
+    width: 90%;
+    max-width: 60rem;
+    margin: 1rem auto;
+    padding: 0;
+  }
+
+  .header {
+    height: 150px;
+  }
+
+  .title {
+    height: 95px;
+    padding-top: 55px;
+  }
+
+  .portrait {
+    height: 150px;
+  }
+
+  .column {
+    width: 22rem;
+    margin: 0 0 4rem;
+    padding: 0 $padding-basic;
+    float: left;
+  }
+
+  span.tooltip {
+    outline: none;
+    padding: initial;
+  
+    span {
+      display: block;
+      padding: 0;
+      margin: 0.1rem 0 0.4rem;
+
+      font-size: 0.85rem;
+      color: $print-text-color;
+      background-color: $print-bg-color;
+
+      // reset
+      z-index: initial;
+      opacity: initial;
+      position: initial;
+      border: none;
+      box-shadow: none;
+      transition: none;
+    }
+  }
+
+  .anchor .section {
+    display: none;
+  }
+
+  .print-only {
+    display: initial;
+  }
+
+  li.print-only {
+    display: list-item;
   }
 }
