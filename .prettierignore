@@ -1,0 +1,28 @@
+css/src/vendor
+
+# general
+.*
+*.lock
+*.log
+
+# other code
+*.pug
+*.py
+*.md
+*.json
+*.xml
+*.map
+
+# minified
+*.html
+*.min.css
+*.css
+
+# images
+*.ico
+*.png
+*.jpg
+*.svg
+
+# whitelist
+!/.eslintrc.js

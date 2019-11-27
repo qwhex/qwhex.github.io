@@ -2,8 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
- 
- 
+
 $main-font: 'Quicksand', sans-serif;
 $heading-font: 'Open Sans Condensed', sans-serif;
 
@@ -15,12 +14,14 @@ $ghost-white: #f7fbfc;
 $funky-magenta: #f71559;
 $funky-purple: #3a243b;
 
-$ease-in-out: cubic-bezier(.42, 0, .58, 1);
+$ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+$fast-transition: 250ms $ease-in-out;
 
 $column-width: 24rem;
 $padding-basic: 1rem;
 $column-count: 2;
-$content-width: ($column-count * $column-width) + ($column-count * $padding-basic * 2);
+$content-width: ($column-count * $column-width) +
+  ($column-count * $padding-basic * 2);
 
 body {
   background-color: $bg-avg;
@@ -75,11 +76,11 @@ h5,
 h6 {
   font-family: $heading-font;
   font-weight: 200;
-  margin: 1rem 0 .4rem;
+  margin: 1rem 0 0.4rem;
 }
 
 h6 {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 h5 {
@@ -105,7 +106,7 @@ h1 {
 a {
   color: $funky-magenta;
   text-decoration: none;
-  transition: color 420ms $ease-in-out;
+  transition: color $fast-transition;
   font-weight: 400;
 
   &:hover {
@@ -114,7 +115,7 @@ a {
 }
 
 td {
-  padding: .2rem;
+  padding: 0.2rem;
 }
 
 ul {
@@ -152,6 +153,7 @@ ul {
 @media only screen and (max-width: 1000px) {
   .column {
     width: 20rem;
+    margin: 0;
   }
 }
 
@@ -169,11 +171,12 @@ ul {
   display: block;
 }
 
-label::before {@media only screen and (max-width: 1000px) {
-  .column {
-    width: 20rem;
+label::before {
+  @media only screen and (max-width: 1000px) {
+    .column {
+      width: 20rem;
+    }
   }
-}
   content: 'Show';
 }
 
@@ -229,7 +232,7 @@ span.tooltip {
     border-radius: 4px;
     background-color: $funky-purple;
     box-shadow: 0.2rem 0.2rem 0.4rem $bg-avg;
-    transition: opacity 420ms $ease-in-out;
+    transition: opacity $fast-transition;
   }
 
   &:hover {
@@ -245,15 +248,15 @@ span.tooltip {
 
 .anchor {
   .section {
-      position: absolute;
-      margin: 0 0 0 -1rem;
-      opacity: 0;
+    position: absolute;
+    margin: 0 0 0 -1rem;
+    opacity: 0;
 
-      &:hover {
-        color: $funky-magenta;
-        opacity: 0.9;
-        transition: opacity 420ms $ease-in-out;
-      }
+    &:hover {
+      color: $funky-magenta;
+      opacity: 0.9;
+      transition: opacity $fast-transition;
+    }
   }
 }
 
@@ -299,7 +302,7 @@ $print-bg-color: #fff;
   }
 
   a {
-    color: $print-text-color;
+    color: $print-text-color !important;
 
     &:hover {
       color: $print-text-color;
@@ -310,8 +313,9 @@ $print-bg-color: #fff;
     //   content: "- "attr(href);
     // }
   }
-  
-  .main-content, .header {
+
+  .main-content,
+  .header {
     width: 90%;
     max-width: 60rem;
     margin: 1rem auto;
@@ -341,13 +345,13 @@ $print-bg-color: #fff;
   span.tooltip {
     outline: none;
     padding: initial;
-  
+
     span {
       display: block;
       padding: 0;
       margin: 0.1rem 0 0.4rem;
 
-      font-size: 0.85rem;
+      font-size: 0.7rem;
       color: $print-text-color;
       background-color: $print-bg-color;
 

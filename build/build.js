@@ -1,12 +1,19 @@
 const fs = require('fs')
 const pug = require('pug')
+const package_json = require('../package.json')
 
-function compilePugs () {
-  console.info('⚭ compiling pug files')
-  const makeIndex = pug.compileFile('pug/index.pug')
-  fs.writeFileSync('index.html', makeIndex())
+function compile_page() {
+  console.info('compiling pug files..')
+
+  const compile_index = pug.compileFile('pug/index.pug')
+  const index = compile_index({
+    email: 'mice@micepapai.com',
+    revised: Date(),
+    revision: package_json.version,
+  })
+  fs.writeFileSync('index.html', index)
 }
 
 if (require.main === module) {
-  compilePugs()
+  compile_page()
 }
