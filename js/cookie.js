@@ -1,6 +1,8 @@
 'use strict'
 
-window.addEventListener('load', function() {
+// https://github.com/osano/cookieconsent/blob/dev/src/options/popup.js
+window.addEventListener('load', () => {
+  window.cookieconsent.utils.setCookie = () => {}
   window.cookieconsent.initialise({
     palette: {
       popup: {
@@ -13,9 +15,11 @@ window.addEventListener('load', function() {
     },
     theme: 'edgeless',
     position: 'bottom-left',
+    dismissOnScroll: true,
     content: {
-      message: 'I know how to use cookies.',
+      message: "I know how to, but I don't<br />use cookies here.",
       dismiss: 'OK!',
+      link: '',
     },
   })
 })
