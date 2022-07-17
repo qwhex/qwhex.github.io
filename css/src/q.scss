@@ -1,14 +1,16 @@
 @import 'vendor/normalize8.0.0';
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400&subset=latin-ext&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
 
-$main-font: 'Quicksand', sans-serif;
-$heading-font: 'Open Sans Condensed', sans-serif;
+$body-font: 'Quicksand', sans-serif;
+$body-font-weight: 400;
+
+$heading-font: 'Open Sans Condensed', serif;
+$heading-font-weight: 300;
 
 $rich-black: #0a0d1d;
 $bg-avg: #161816;
-$gray: #bbbbbb;
 $ghost-white: #f7fbfc;
 
 $link-color: #44FBC6;
@@ -16,24 +18,26 @@ $funky-magenta: #f71559;
 $funky-purple: #3a243b;
 $dark-funky-purple: #1b091c;
 
+$transparent: rgba(0, 0, 0, 0);
+
 $ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
 $fast-transition: 250ms $ease-in-out;
 
 $padding-basic: 1rem;
 $spacing-basic: 4rem;
 
-$column-width: 20rem;
+$column-width: 24rem;
 $column-count: 2;
 $content-width: ($column-count * $column-width) +
   ($column-count * $padding-basic * 2);
 
 body {
   background-color: $bg-avg;
-  background-image: url('/img/bg_small_blur.jpg');
+  background-image: url('/img/bg_small_blur.webp');
   color: $ghost-white;
-  font-family: $main-font;
+  font-family: $body-font;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: $body-font-weight;
   line-height: 1.5;
 }
 
@@ -79,7 +83,7 @@ h4,
 h5,
 h6 {
   font-family: $heading-font;
-  font-weight: 200;
+  font-weight: $heading-font-weight;
   margin: 1rem 0 0.4rem;
 }
 
@@ -111,7 +115,7 @@ a {
   color: $link-color;
   text-decoration: none;
   transition: color $fast-transition;
-  font-weight: 400;
+  font-weight: $body-font-weight;
 
   &:hover {
     color: $ghost-white;
@@ -123,7 +127,7 @@ td {
 }
 
 ul {
-  list-style-type: circle;
+  list-style-type: circle; // disc maybe?
   margin: 0.618rem 0 1rem;
 }
 
@@ -141,17 +145,20 @@ ul {
     padding: $spacing-basic $padding-basic 2rem;
 
     .portrait {
+      $portrait-border-size: 5px;
+      $portrait-border-color: #000000aa;
+
       margin: 0;
       border-radius: 50%;
-      width: 200px;
-      height: 200px;
+      width: 200px - $portrait-border-size * 2;
+      height: 200px - $portrait-border-size * 2;
       float: left;
+      border: $portrait-border-size solid $portrait-border-color;
     }
     
     .title {
       left: 2rem;
       height: 125px;
-      width: 10rem;
       vertical-align: middle;
       float: left;
       position: relative;
@@ -199,11 +206,13 @@ label::before {
       width: 20rem;
     }
   }
-  content: 'Show';
+  font-size: 0.7rem;
+  font-family: monospace;
+  content: '▶ show details';
 }
 
 .show-toggle-content:checked + label::before {
-  content: 'Hide';
+  content: '▼ hide details';
 }
 
 label {
@@ -212,7 +221,25 @@ label {
   width: 100%;
   text-decoration: none;
   cursor: pointer;
-  margin: 1rem 0;
+  // padding: 0.2rem 1rem 1rem 0;
+  padding: 0 0 0.2rem;
+  margin-bottom: 0.67rem
+}
+
+
+// job
+
+span.job {
+  // display: inline-block;
+  margin-bottom: 0.67rem;
+
+  span {
+    display: block;
+    padding: 0;
+    // margin: 0.1rem 0 0;
+    margin: 0.1rem 0 0.67rem;
+    font-size: 0.7rem;
+  }
 }
 
 // tooltip
@@ -248,6 +275,20 @@ span.tooltip {
   }
 }
 
+
+// clickie
+.clickie {
+  font-size: .6em;
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
 // anchor
 
 .anchor {
@@ -272,7 +313,6 @@ span.tooltip {
     overflow: hidden;
     margin: 0 1rem;
     padding-bottom: 4rem;
-    font-weight: 400;
 
     .header {
       height: 100px;
@@ -303,7 +343,7 @@ span.tooltip {
 */
 
 $print-text-color: #000;
-$print-bg-color: #fff;
+$print-bg-color: #ffffff00;
 
 .print-only {
   display: none;
@@ -314,7 +354,7 @@ $print-bg-color: #fff;
     background-color: $print-bg-color;
     background-image: none;
     color: $print-text-color;
-    font-weight: 400;
+    font-weight: $body-font-weight;
     font-size: 12px;
   }
 
@@ -326,7 +366,7 @@ $print-bg-color: #fff;
       color: $print-text-color;
     }
 
-    // note: should be useful if other links are added
+    // note: could be useful if other links are added
     // &:after {
     //   content: "- "attr(href);
     // }
@@ -338,6 +378,7 @@ $print-bg-color: #fff;
 
       .portrait {
         height: 150px;
+        width: 150px;
       }
 
       .title {

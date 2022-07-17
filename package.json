@@ -1,6 +1,6 @@
 {
   "name": "mice-papai-cv",
-  "version": "2022.7.17",
+  "version": "2022.7.18",
   "description": "Mice Pápai CV",
   "main": "build.js",
   "scripts": {
@@ -22,7 +22,7 @@
   "repository": "github:qwhex/qwhex.github.io",
   "author": "Mice Pápai",
   "license": "ISC",
-  "homepage": "https://qwhex.github.io",
+  "homepage": "https://micepapai.com",
   "devDependencies": {
     "concurrently": "^5.3.0",
     "eslint": "^6.7.1",
