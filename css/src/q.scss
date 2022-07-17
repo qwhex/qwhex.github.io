@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
 $main-font: 'Quicksand', sans-serif;
-$heading-font: 'Open Sans Condensed', sans-serif;
+$heading-font: 'Open Sans Condensed', serif;
 
 $rich-black: #0a0d1d;
 $bg-avg: #161816;
@@ -16,24 +16,26 @@ $funky-magenta: #f71559;
 $funky-purple: #3a243b;
 $dark-funky-purple: #1b091c;
 
+$transparent: rgba(0, 0, 0, 0);
+
 $ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
 $fast-transition: 250ms $ease-in-out;
 
 $padding-basic: 1rem;
 $spacing-basic: 4rem;
 
-$column-width: 20rem;
+$column-width: 24rem;
 $column-count: 2;
 $content-width: ($column-count * $column-width) +
   ($column-count * $padding-basic * 2);
 
 body {
   background-color: $bg-avg;
-  background-image: url('/img/bg_small_blur.jpg');
+  background-image: url('/img/bg_small_blur.webp');
   color: $ghost-white;
   font-family: $main-font;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -123,7 +125,7 @@ td {
 }
 
 ul {
-  list-style-type: circle;
+  list-style-type: circle; // disc maybe?
   margin: 0.618rem 0 1rem;
 }
 
@@ -141,11 +143,15 @@ ul {
     padding: $spacing-basic $padding-basic 2rem;
 
     .portrait {
+      $portrait-border-size: 5px;
+      $portrait-border-color: #000000aa;
+
       margin: 0;
       border-radius: 50%;
-      width: 200px;
-      height: 200px;
+      width: 200px - $portrait-border-size * 2;
+      height: 200px - $portrait-border-size * 2;
       float: left;
+      border: $portrait-border-size solid $portrait-border-color;
     }
     
     .title {
@@ -199,11 +205,12 @@ label::before {
       width: 20rem;
     }
   }
-  content: 'Show';
+  font-size: 0.7rem;
+  content: 'show details';
 }
 
 .show-toggle-content:checked + label::before {
-  content: 'Hide';
+  content: 'hide details';
 }
 
 label {
@@ -212,7 +219,7 @@ label {
   width: 100%;
   text-decoration: none;
   cursor: pointer;
-  margin: 1rem 0;
+  padding: 0.2rem 1rem 1rem 0;
 }
 
 // tooltip
@@ -247,6 +254,33 @@ span.tooltip {
     }
   }
 }
+
+
+// job
+
+span.job {
+  span {
+    display: block;
+    padding: 0;
+    margin: 0.1rem 0 0.67rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+}
+
+
+// clickie
+.clickie {
+  font-size: .6em;
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 
 // anchor
 
@@ -303,7 +337,7 @@ span.tooltip {
 */
 
 $print-text-color: #000;
-$print-bg-color: #fff;
+$print-bg-color: #ffffff00;
 
 .print-only {
   display: none;
@@ -326,7 +360,7 @@ $print-bg-color: #fff;
       color: $print-text-color;
     }
 
-    // note: should be useful if other links are added
+    // note: could be useful if other links are added
     // &:after {
     //   content: "- "attr(href);
     // }
@@ -338,6 +372,7 @@ $print-bg-color: #fff;
 
       .portrait {
         height: 150px;
+        width: 150px;
       }
 
       .title {
